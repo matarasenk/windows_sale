@@ -5,7 +5,7 @@ const forms = () => {
     // Заготовки для экрана загрузки
     const message = {
         loading: 'Загрузка...',
-        success: 'Спасибо! Скоро с Вами свяжемся.',
+        success: 'Спасибо! Скоро мы с вами свяжемся',
         failure: 'Что-то пошло не так...'
     };
 
@@ -31,10 +31,16 @@ const forms = () => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
 
+        // Пробую вставить гиф в форму после ввода данных
+        // let mainForm = document.getElementsByClassName('form_notice')[0];
+        // let varPath = 'https://c.tenor.com/0AVbKGY_MxMAAAAC/check-mark-verified.gif'
+        // mainForm.insertAdjacentHTML('beforeend', `<img class='' src=${varPath}/>`)
+
         // Создаём блок в котором показываем пользователю что, что-то пошло не так
         let statusMessages = document.createElement('div');
             statusMessages.classList.add('status');
             item.appendChild(statusMessages);
+
 
             //Собираем все данные из форм
             const formData = new FormData(item);
